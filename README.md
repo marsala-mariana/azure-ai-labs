@@ -1,41 +1,41 @@
-azure-ai-labs# Azure OCR Lab
-Este repositorio está diseñado para ejecutar pruebas y laboratorios con el servicio OCR de Azure. El objetivo es enviar un archivo PDF local a la API de Azure y obtener el texto extraído del mismo.
+Azure OCR Lab
 
+Este repositorio contiene diferentes componentes de pruebas que implementan diversos servicios de Azure AI. Cada componente está orientado a un laboratorio diferente que utiliza distintas tecnologías de Azure AI.
 Requisitos
-Asegúrate de tener las siguientes herramientas y dependencias instaladas en tu entorno de desarrollo:
 
-Python 3.x
-Paquete requests (para realizar solicitudes HTTP)
-Paquete python-dotenv (para cargar las variables de entorno desde el archivo .env)
-Pasos para usar el repositorio
-1. Clonar el repositorio
-Clona el repositorio a tu máquina local:
+Asegúrate de tener las siguientes herramientas instaladas en tu entorno:
+
+    Python 3.x
+
+    Paquete requests: Para realizar solicitudes HTTP.
+
+    Paquete python-dotenv: Para cargar las variables de entorno desde el archivo .env.
+
+Instalación de dependencias
+
+    Clonar el repositorio:
 
 git clone <URL_DEL_REPOSITORIO>
 cd <nombre_del_repositorio>
 
-### 2. Instalar las dependencias
+Instalar las dependencias:
 
-Instala las dependencias necesarias utilizando pip:
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
-### 3. Crear el archivo .env
-En la raíz del proyecto, crea un archivo .env y agrega las siguientes variables de entorno:
+Configuración de variables de entorno
+
+Antes de ejecutar cualquier componente, debes configurar las variables de entorno. Crea un archivo .env en la raíz del proyecto con las siguientes variables:
+
 AZURE_ENDPOINT=tu_endpoint_de_azure
 AZURE_KEY=tu_clave_de_azure
 
-AZURE_ENDPOINT: El endpoint de la API de Azure OCR.
-AZURE_KEY: La clave de suscripción de tu servicio de Azure OCR.
+    AZURE_ENDPOINT: El endpoint de la API de Azure correspondiente al servicio que estás utilizando.
 
-### 4. Crear el archivo .env
-Ejecutar el script
-Una vez que hayas configurado todo, ejecuta el script Python:
-python ocr_script.py
+    AZURE_KEY: La clave de suscripción de tu servicio de Azure correspondiente.
 
-### 5. Ver los resultados
-El script enviará el archivo PDF a Azure OCR, procesará los resultados y mostrará el texto detectado en la consola.
 
-### 6. ¿Qué hacer si algo no funciona?
-Asegúrate de que las claves de Azure y el endpoint estén configurados correctamente en el archivo .env.
-Verifica que el archivo PDF esté correctamente colocado y sea accesible por el script.
-Si recibes un error, revisa el código de estado de la respuesta para obtener más detalles sobre lo que puede estar fallando.
+Ejecución de los Laboratorios
+
+Para ejecutar cualquier componente, simplemente usa el siguiente formato en la terminal:
+
+python <nombre_del_componente>.py
